@@ -1,0 +1,160 @@
+{
+//  "parser": "babel-eslint",
+//  "plugins": [
+//    "@typescript-eslint",
+//    "react",
+//    "jest"
+//  ],
+//  "extends": [
+//    "airbnb",
+//    "plugin:@typescript-eslint/recommended"
+//  ],
+//
+//  "globals": {
+//    "React": true,
+//    "document": true,
+//    "window": true,
+//    "jQuery": true,
+//    "$": true,
+//    "localStorage": true,
+//    "fetch": true
+//  },
+//  "root": true,
+//
+//  "rules": {
+//    "@typescript-eslint/explicit-function-return-type": "off",
+//    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "@=" }],
+//
+//    "jest/no-disabled-tests": "warn",
+//    "jest/no-focused-tests": "error",
+//    "jest/no-identical-title": "error",
+//    "jest/prefer-to-have-length": "warn",
+//    "jest/valid-expect": "error",
+//    "jsx-a11y/href-no-hash": "off",
+//    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
+//
+//    "react/prefer-stateless-function": "warn",
+//    "react/self-closing-comp": [
+//      "warn",
+//      {
+//        "component": true,
+//        "html": false
+//      }
+//    ],
+//    "react/sort-comp": [
+//      1,
+//      {
+//        "order": [
+//          "static-methods",
+//          "lifecycle",
+//          "everything-else",
+//          "rendering"
+//        ],
+//        "groups": {
+//          "rendering": ["/^render.+$/", "render"]
+//        }
+//      }
+//    ],
+//    "react/require-default-props": 0,
+//    "react/jsx-boolean-value": ["warn", "never"],
+//    "react/jsx-closing-bracket-location": ["warn", "after-props"],
+//    "react/jsx-curly-spacing": ["warn", "never"],
+//    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+//    "react/jsx-first-prop-new-line": ["warn", "multiline"],
+//    "react/jsx-handler-names": [
+//      "warn",
+//      {
+//        "eventHandlerPrefix": "handle",
+//        "eventHandlerPropPrefix": "on"
+//      }
+//    ],
+//    "react/jsx-indent": ["warn", 2],
+//    "react/jsx-key": "error",
+//    "react/jsx-wrap-multilines": ["warn"],
+//    "react/jsx-indent-props": 0,
+//
+//    "no-trailing-spaces": 0,
+//    "padded-blocks": ["warn", { "classes": "always" }],
+//    "prefer-template": 0,
+//
+//    "import/prefer-default-export": 0,
+//    "import/no-unresolved": 0,
+//    "import/no-extraneous-dependencies": 0,
+//    "import/extensions": 0,
+//
+//    "babel/object-curly-spacing": 0
+//  },
+//  "env": {
+//    "es6": true,
+//    "jest": true,
+//    "browser": true,
+//    "node": true
+//  }
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "jest", "@typescript-eslint", "prettier"],
+
+  "globals": {
+    "React": true,
+    "document": true,
+    "window": true,
+    "jQuery": true,
+    "$": true,
+    "localStorage": true,
+    "fetch": true
+  },
+
+  "root": true,
+  "rules": {
+
+    "max-len": ["error", 160],
+
+    "prettier/prettier": ["off", {}, {}],
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+
+    "babel/object-curly-spacing": 0,
+
+    "react/jsx-first-prop-new-line": ["warn", "multiline"],
+    "react/jsx-closing-bracket-location": ["warn", "after-props"],
+    "react/require-default-props": 0,
+    "react/sort-comp": [
+      1,
+      {
+        "order": [
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "rendering"
+        ],
+        "groups": {
+          "rendering": ["/^render.+$/", "render"]
+        }
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "env": {
+    "es6": true,
+    "jest": true,
+    "browser": true,
+    "node": true
+  }
+}

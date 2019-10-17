@@ -1,0 +1,9 @@
+**/ioc.ts
+src/**/__tests__/**
+
+webpack.config.js
+babel.config.js
+
+node_modules/*
+data_tests/*
+webpack/*
