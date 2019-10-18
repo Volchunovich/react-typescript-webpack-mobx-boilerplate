@@ -6,28 +6,26 @@
       "es2015",
       "dom"
     ],
-//    "allowJs": true,
+    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
+    "strictPropertyInitialization": false,
+    "isolatedModules": true,
     "resolveJsonModule": true,
-//    "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "noImplicitAny": false,
-    "strictPropertyInitialization": false,
-    "strictNullChecks": true,
-    "strict": true,
-    "declaration": true
+    "strict": true
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "build"
   ]
 }

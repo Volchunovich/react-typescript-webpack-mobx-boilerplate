@@ -1,7 +1,6 @@
 const eslint = require('eslint');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-const TypescriptDeclarationPlugin = require('typescript-declaration-webpack-plugin');
 const commonPaths = require('./paths');
 
 module.exports = {
@@ -87,8 +86,5 @@ module.exports = {
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async',
     }),
-    new TypescriptDeclarationPlugin({
-      out: commonPaths.typingsPath,
-    })
   ],
 };
