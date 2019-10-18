@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const eslint = require('eslint');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
@@ -14,12 +15,13 @@ module.exports = {
         loader: 'eslint-loader',
         exclude: /(node_modules|bower_components)/,
         options: {
+          cache: true,
           formatter: eslint.CLIEngine.getFormatter(),
           emitWarning: process.env.NODE_ENV !== 'production',
         },
       },
       {
-        test: /\.js$/,
+        test: /\.(jsx?)$/,
         loader: 'babel-loader',
         exclude: /(node_modules|bower_components)/,
       },
@@ -43,7 +45,7 @@ module.exports = {
             loader: 'awesome-typescript-loader',
           },
         ],
-        include: [commonPaths.main],
+        include: commonPaths.src,
       },
 
       {
@@ -68,20 +70,25 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
     ],
   },
 
   resolve: {
-    modules: ['node_modules', commonPaths.main],
+    modules: ['node_modules'],
     extensions: ['*', '.js', '.jsx', '.ts', '.tsx', '.css', '.scss'],
     alias: {
       'react-dom': '@hot-loader/react-dom',
     },
   },
   plugins: [
-    // new webpack.ProgressPlugin(),
+    new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
-      template: commonPaths.templatePath,
+      hash: true,
+      template: commonPaths.wwwPath,
     }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async',

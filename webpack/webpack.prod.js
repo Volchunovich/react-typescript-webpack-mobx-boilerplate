@@ -13,6 +13,7 @@ module.exports = {
     chunkFilename: `${commonPaths.jsFolder}/[name].[chunkhash].js`,
   },
   optimization: {
+    minimize: true,
     minimizer: [
       new TerserPlugin({
         // Use multi-process parallel running to improve the build speed
@@ -20,7 +21,7 @@ module.exports = {
         parallel: true,
         // Enable file caching
         cache: true,
-        sourceMap: true,
+        // sourceMap: true,
       }),
       new OptimizeCSSAssetsPlugin(),
     ],
@@ -38,7 +39,6 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/,
           name: 'async',
           chunks: 'async',
-          minChunks: 4,
         },
       },
     },
@@ -73,7 +73,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `${commonPaths.cssFolder}/[name].css`,
       chunkFilename: `${commonPaths.cssFolder}/[name].css`,
+      hash: true,
     }),
   ],
-  devtool: 'source-map',
 };
