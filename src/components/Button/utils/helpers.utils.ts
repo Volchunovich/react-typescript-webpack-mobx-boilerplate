@@ -1,5 +1,5 @@
-import { ButtonStyledProps } from '../index';
 import Styles from '../styled';
+import { ButtonStyledProps } from './button.types';
 
 const getTheme = (props: ButtonStyledProps): string => {
   if (!props.buttonType) {
