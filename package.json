@@ -1,6 +1,6 @@
 {
   "name": "react-typescript-webpack-mobx-boilerplate",
-  "version": "0.1.0",
+  "version": "1.2.0",
   "description": "react + typescript + webpack + mobx = best boilerplate ever",
   "repository": "https://github.com/Volchunovich/react-typescript-webpack-mobx-boilerplate",
   "scripts": {
