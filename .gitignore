@@ -6,7 +6,8 @@
 .pnp.js
 
 # Test
-/data_tests
+/private
+/**/__snapshots__/**
 .eslintcache
 
 # production

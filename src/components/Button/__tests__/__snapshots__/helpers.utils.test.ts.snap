@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Helpers Should received 'light' buttonType and return string 1`] = `
+"
+  // Light styles
+
+  background: linear-gradient(to bottom,#a4d4ff 50%,#91c6f5 50%);
+  border-bottom: 8px solid #4e0a71;
+"
+`;
+
+exports[`Button Helpers Should received 'light' buttonType and return string: light 1`] = `"light"`;
+
+exports[`Button Helpers Should received 'primary' buttonType and return string 1`] = `
+"
+  // Primary styles
+
+  background: linear-gradient(to bottom,#9239d1 50%,#8239d1 50%);
+  border-bottom: 8px solid #6b278e
+"
+`;
+
+exports[`Button Helpers Should received 'primary' buttonType and return string: primary 1`] = `"primary"`;

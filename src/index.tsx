@@ -1,13 +1,5 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import RootRouting from './root.routing';
-import GlobalStyles from './styled';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import RootRouter from './root-router';
 
-ReactDOM.render(
-  <BrowserRouter>
-    <GlobalStyles />
-    <RootRouting />
-  </BrowserRouter>,
-  document.getElementById('root'),
-);
+ReactDOM.render(<RootRouter />, document.getElementById('root'));

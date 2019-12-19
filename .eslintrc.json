@@ -26,13 +26,14 @@
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "react/no-did-update-set-state": "error",
-    "react/jsx-closing-bracket-location": ["warn", "after-props"],
     "react/require-default-props": 0,
     "react/self-closing-comp": "warn",
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
     "react/no-unused-state": "warn",
     "react/state-in-constructor": "off",
     "react/sort-comp": "off",
+    "react/prop-types": 0,
+    "react/no-array-index-key": 0,
 
     "prettier/prettier": "error",
 
@@ -41,11 +42,11 @@
     "import/no-extraneous-dependencies": 0,
     "import/extensions": 0,
 
-    "max-len": ["error", 120],
     "prefer-arrow-callback": "warn",
     "prefer-const": "error",
     "no-unused-vars": "off",
     "func-call-spacing": "off",
+    "spaced-comment": "off",
 
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/explicit-member-accessibility": 0,

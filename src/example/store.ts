@@ -1,5 +1,5 @@
 import { action, computed, observable } from 'mobx';
-import { provide } from '../ioc';
+import { provide } from '../utils/ioc.utils';
 
 @provide.singleton()
 export class ExampleStore {

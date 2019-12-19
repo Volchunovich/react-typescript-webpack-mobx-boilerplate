@@ -1,12 +1,19 @@
-const webpack = require('webpack');
-const eslint = require('eslint');
+const ProgressPlugin = require('webpack').ProgressPlugin;
+const CLIEngine = require('eslint').CLIEngine;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const commonPaths = require('./paths');
 
 module.exports = {
-  entry: commonPaths.entryPath,
-
+  entry: [
+    commonPaths.entryPath,
+    "core-js/modules/es.promise",
+    "core-js/modules/es.array.iterator"
+  ],
+  output: {
+    path: commonPaths.outputPath,
+    filename: '[name].js',
+  },
   module: {
     rules: [
       {
@@ -16,7 +23,7 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         options: {
           cache: true,
-          formatter: eslint.CLIEngine.getFormatter(),
+          formatter: CLIEngine.getFormatter(),
           emitWarning: process.env.NODE_ENV !== 'production',
         },
       },
@@ -85,7 +92,7 @@ module.exports = {
     },
   },
   plugins: [
-    new webpack.ProgressPlugin(),
+    new ProgressPlugin(),
     new HtmlWebpackPlugin({
       hash: true,
       template: commonPaths.wwwPath,

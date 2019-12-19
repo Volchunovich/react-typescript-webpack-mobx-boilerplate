@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button StyledComponent Light prop should be true 1`] = `"light"`;
+
+exports[`Button StyledComponent Primary prop should be true 1`] = `"primary"`;
+
+exports[`Button StyledComponent Should render without errors 1`] = `null`;

@@ -3,6 +3,7 @@
   "version": "1.4.1",
   "description": "react + typescript + webpack + mobx = best boilerplate ever",
   "repository": "https://github.com/Volchunovich/react-typescript-webpack-mobx-boilerplate",
+  "private": false,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open",
     "build": "cross-env NODE_ENV=production webpack",
@@ -14,37 +15,6 @@
     "name": "Artem",
     "email": "volchunovich.artem@gmail.com",
     "url": "https://github.com/Volchunovich/"
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "moduleDirectories": [
-      "src",
-      "node_modules"
-    ],
-    "coverageDirectory": "<rootDir>/data_tests/coverage",
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/enzyme-to-json/serializer"
-    ],
-    "moduleNameMapper": {
-      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js",
-      "\\.(jpg|gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
-    },
-    "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
-      ".+\\.(css|styl|less|sass|scss)$": "<rootDir>/node_modules/jest-css-modules-transform"
-    },
-    "setupFilesAfterEnv": [
-      "<rootDir>/jestSetup.js"
-    ],
-    "moduleFileExtensions": [
-      "css",
-      "scss",
-      "json",
-      "js",
-      "jsx",
-      "ts",
-      "tsx"
-    ]
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,scss,css,md}": [

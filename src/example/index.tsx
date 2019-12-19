@@ -1,13 +1,14 @@
 import { observable, reaction } from 'mobx';
 import { observer } from 'mobx-react';
-import React from 'react';
+import React, { Component } from 'react';
 import Button from '../components/Button';
-import { lazyInject } from '../ioc';
+import withErrorBoundary from '../error-boundaries/components/template';
+import { lazyInject } from '../utils/ioc.utils';
 import { ExampleStore } from './store';
 import Styled from './styled';
 
 @observer
-class ExamplePage extends React.Component {
+class ExamplePage extends Component {
   @lazyInject(ExampleStore)
   protected readonly store: ExampleStore;
 
@@ -54,4 +55,4 @@ class ExamplePage extends React.Component {
   }
 }
 
-export default ExamplePage;
+export default withErrorBoundary(ExamplePage);
