@@ -17,7 +17,10 @@ class ExamplePage extends Component {
   @observable whoAreYou: string[] = ['Stranger?', 'Mage?', 'or .. React developer?'];
 
   componentDidMount(): void {
-    reaction(() => this.onClickButtonHandler, () => {});
+    reaction(
+      () => this.onClickButtonHandler,
+      () => {},
+    );
   }
 
   private onClickButtonHandler = () => {
